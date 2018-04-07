@@ -9,7 +9,7 @@ const enhance = withStyles({
     width: '100%',
     textAlign: 'center',
   },
-});
+}, { name: 'Loading' });
 
 const Loading = ({ classes, message }) => (
   <div className={classes.root}>

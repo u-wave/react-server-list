@@ -35,7 +35,7 @@ const enhance = compose(
       display: 'flex',
       justifyContent: 'space-between',
     },
-  }),
+  }, { name: 'ServerThumbnail' }),
 );
 
 const WarningIcon = withProps({

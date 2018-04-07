@@ -28,7 +28,7 @@ const enhance = withStyles({
   artist: {
     margin: 0,
   },
-});
+}, { name: 'CurrentMedia' });
 
 const CurrentMedia = ({
   classes,

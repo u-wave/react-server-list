@@ -10,7 +10,7 @@ const enhance = withStyles({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
   },
-});
+}, { name: 'ServerListing' });
 
 const ServerListing = ({
   classes,

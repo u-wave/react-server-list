@@ -9,10 +9,18 @@ import MuiDialog, {
   DialogActions,
   withMobileDialog,
 } from 'material-ui/Dialog';
+import { withStyles } from 'material-ui/styles';
 
 const Dialog = withMobileDialog()(MuiDialog);
 
+const enhance = withStyles({
+  markdown: {
+    color: 'rgba(255, 255, 255, 0.6)',
+  },
+}, { name: 'DescriptionDialog' });
+
 const DescriptionDialog = ({
+  classes,
   server,
   isOpen,
   onCloseDescription,
@@ -22,7 +30,7 @@ const DescriptionDialog = ({
       {server.name}
     </DialogTitle>
     <DialogContent>
-      <div className="markdown">
+      <div className={classes.markdown}>
         <Markdown source={stripIndent(server.description)} />
       </div>
     </DialogContent>
@@ -38,20 +46,20 @@ const DescriptionDialog = ({
         Join
       </Button>
     </DialogActions>
-    <style jsx>{`
-      .markdown {
-        color: rgba(255, 255, 255, 0.6);
-      }
-    `}
-    </style>
   </Dialog>
 );
 
 DescriptionDialog.propTypes = {
+  classes: PropTypes.shape({
+    markdown: PropTypes.string.isRequired,
+  }).isRequired,
   server: PropTypes.shape({
+    name: PropTypes.string,
+    description: PropTypes.string,
+    url: PropTypes.string,
   }).isRequired,
   isOpen: PropTypes.bool,
   onCloseDescription: PropTypes.func.isRequired,
 };
 
-export default DescriptionDialog;
+export default enhance(DescriptionDialog);
