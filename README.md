@@ -15,7 +15,7 @@ npm install --save @u-wave/react-server-list
 [Demo][] - [Demo source code][]
 
 ```js
-import ServerList from '@u-wave/react-server-list';
+import { Container as ServerList } from '@u-wave/react-server-list';
 
 <ServerList hub="https://announce.u-wave.net" />
 ```
@@ -30,8 +30,6 @@ import ServerList from '@u-wave/react-server-list';
 [Install]: #install
 [Usage]: #usage
 [Props]: #props
-[Demo]: https://react-youtube-demo.surge.sh
-[Demo source code]: ./example
+[Demo]: https://hub.u-wave.net
+[Demo source code]: https://github.com/u-wave/hub/tree/master/client
 [MIT]: ./LICENSE
-[react-dailymotion]: https://github.com/u-wave/react-dailymotion
-[@u-wave/react-vimeo]: https://github.com/u-wave/react-vimeo
