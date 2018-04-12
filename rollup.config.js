@@ -6,6 +6,13 @@ const pkg = require('./package.json');
 const external = Object.keys(pkg.dependencies)
   .concat(Object.keys(pkg.peerDependencies));
 
+function isExternalModule(m) {
+  if (m.startsWith('@')) {
+    return external.some(ex => ex === m.split('/').slice(0, 2).join('/'));
+  }
+  return external.some(ex => ex === m.split('/')[0]);
+}
+
 process.env.BABEL_ENV = 'rollup';
 
 export default {
@@ -20,7 +27,7 @@ export default {
     format: 'es',
     sourcemap: true,
   }],
-  external: id => external.some(m => id.split('/')[0] === m),
+  external: isExternalModule,
   plugins: [
     babel(),
     nodeResolve(),

@@ -29,9 +29,9 @@
   },
   "homepage": "https://github.com/u-wave/react-server-list#readme",
   "dependencies": {
+    "@material-ui/icons": "^1.0.0-beta.42",
     "isomorphic-fetch": "^2.2.1",
-    "material-ui": "^1.0.0-beta.40",
-    "material-ui-icons": "^1.0.0-beta.36",
+    "material-ui": "^1.0.0-beta.41",
     "ms": "^2.1.1",
     "prop-types": "^15.6.1",
     "react-markdown": "^3.3.0",
