@@ -20,7 +20,7 @@ export function loadServers(hubServer) {
 }
 
 export function announceEvents(hubServer, notify) {
-  const source = new EventSource(`${hubServer}/events`);
+  const source = new EventSource(`${hubServer.replace(/\/$/, '')}/events`);
 
   const listener = (event) => {
     let data;
