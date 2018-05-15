@@ -1,6 +1,6 @@
 {
   "name": "@u-wave/react-server-list",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "Show a list of üWave servers.",
   "main": "dist/u-wave-react-server-list.js",
   "module": "dist/u-wave-react-server-list.es.js",
