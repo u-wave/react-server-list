@@ -1,4 +1,5 @@
 /* global EventSource */
+import 'event-source-polyfill';
 import fetch from 'isomorphic-fetch';
 import ms from 'ms';
 
