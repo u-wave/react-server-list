@@ -14,7 +14,9 @@ const enhance = withStyles({
 const Loading = ({ classes, message }) => (
   <div className={classes.root}>
     <CircularProgress size={300} mode="indeterminate" />
-    <Typography>{message}</Typography>
+    <Typography>
+      {message}
+    </Typography>
   </div>
 );
 

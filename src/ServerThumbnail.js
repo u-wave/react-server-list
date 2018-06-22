@@ -53,6 +53,10 @@ const WarningText = withProps({
   },
 })(Typography);
 
+const timedOutMessage = since => (
+  ` This server may be down. It has not responded for ${since}.`
+);
+
 const ServerThumbnail = ({
   classes,
   server,
@@ -88,8 +92,8 @@ const ServerThumbnail = ({
       {server.timeSincePing >= downTimeout && (
         <CardContent>
           <WarningText>
-            <WarningIcon /> This server may be down.
-            It has not responded for {ms(server.timeSincePing, { long: true })}.
+            <WarningIcon />
+            {timedOutMessage(ms(server.timeSincePing, { long: true }))}
           </WarningText>
         </CardContent>
       )}

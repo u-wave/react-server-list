@@ -25,10 +25,13 @@ export default class Container extends React.Component {
   }
 
   componentDidMount() {
-    if (!this.state.servers) {
+    const { hub } = this.props;
+    const { servers } = this.state;
+
+    if (!servers) {
       this.update();
     }
-    this.events = announceEvents(this.props.hub, this.handleUpdate);
+    this.events = announceEvents(hub, this.handleUpdate);
   }
 
   componentWillUnmount() {
@@ -36,7 +39,9 @@ export default class Container extends React.Component {
   }
 
   update() {
-    loadServers(this.props.hub).then((servers) => {
+    const { hub } = this.props;
+
+    loadServers(hub).then((servers) => {
       this.setState({ servers });
     });
   }
@@ -48,10 +53,12 @@ export default class Container extends React.Component {
   }
 
   render() {
-    return this.state.servers == null ? (
+    const { servers } = this.state;
+
+    return servers == null ? (
       <Loading message="Loading available servers..." />
     ) : (
-      <ServerListing servers={this.state.servers} />
+      <ServerListing servers={servers} />
     );
   }
 }
@@ -63,4 +70,3 @@ Container.propTypes = {
 Container.defaultProps = {
   hub: 'https://announce.u-wave.net/',
 };
-

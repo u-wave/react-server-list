@@ -18,7 +18,9 @@ const ServerListing = ({
 }) => (
   <div className={classes.root}>
     {servers.length === 0 ? (
-      <Typography>No servers are currently available.</Typography>
+      <Typography>
+        No servers are currently available.
+      </Typography>
     ) : servers.map(server => (
       <ServerThumbnail
         key={server.url}
