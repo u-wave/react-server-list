@@ -41,8 +41,12 @@ const CurrentMedia = ({
     />
 
     <div className={classes.nowPlaying}>
-      <p className={classes.title}>{media.title}</p>
-      <p className={classes.artist}>{media.artist}</p>
+      <p className={classes.title}>
+        {media.title}
+      </p>
+      <p className={classes.artist}>
+        {media.artist}
+      </p>
     </div>
   </div>
 ) : (

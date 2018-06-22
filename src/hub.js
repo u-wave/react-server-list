@@ -8,7 +8,7 @@ const downTimeout = ms('10 minutes');
 export function loadServers(hubServer) {
   return fetch(hubServer)
     .then(response => response.json())
-    .then(state =>
+    .then(state => (
       state.servers.sort((a, b) => {
         if (a.timeSincePing >= downTimeout) {
           return 1;
@@ -17,7 +17,8 @@ export function loadServers(hubServer) {
           return -1;
         }
         return 0;
-      }));
+      })
+    ));
 }
 
 export function announceEvents(hubServer, notify) {
@@ -42,4 +43,3 @@ export function announceEvents(hubServer, notify) {
 
   return { remove };
 }
-
