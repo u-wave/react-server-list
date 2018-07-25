@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.0.2
+* Update @material-ui/icons to v2. (https://github.com/u-wave/react-server-list/commit/da8918bd21c791254ef62dbde3a4ca1fcb1389e8)
+
 ## 2.0.1
 * Add EventSource polyfill for IE 11 and MS Edge. (https://github.com/u-wave/react-server-list/commit/ddd6dc7403272caee6ac881c9d0f281cb39c6000)
 
