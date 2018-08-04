@@ -18,6 +18,8 @@ module.exports = (api) => {
     ],
     plugins: [
       '@babel/transform-react-constant-elements',
+      '@babel/transform-react-inline-elements',
+      '@babel/transform-runtime',
       ['transform-react-remove-prop-types', { mode: 'wrap' }],
     ],
   };

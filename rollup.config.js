@@ -29,7 +29,7 @@ export default {
   }],
   external: isExternalModule,
   plugins: [
-    babel(),
+    babel({ runtimeHelpers: true }),
     nodeResolve(),
   ],
 };
