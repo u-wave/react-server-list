@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 3.0.0
+* Update @material-ui/core, @material-ui/icons to v3. (https://github.com/u-wave/react-server-list/pull/26)
+* Update event-source-polyfill to v0.0.16. (https://github.com/u-wave/react-server-list/commit/ccf59f3abcc5b046dd89c654b6cbf25d6bf2cbb4)
+* Output ES modules build to a .mjs file. (https://github.com/u-wave/react-server-list/commit/3b56ad99fdc45db2b8dfdaea882527ace7d8a21f)
+
 ## 2.0.3
 * Update recompose to v0.28.
 
