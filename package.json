@@ -3,7 +3,7 @@
   "version": "3.0.1",
   "description": "Show a list of üWave servers.",
   "main": "dist/u-wave-react-server-list.js",
-  "module": "dist/u-wave-react-server-list.mjs",
+  "module": "dist/u-wave-react-server-list.es.js",
   "scripts": {
     "prepare": "npm run build",
     "build": "rollup -c",
