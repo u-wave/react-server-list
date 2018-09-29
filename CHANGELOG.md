@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 3.0.3
+* Update dependencies. (https://github.com/u-wave/react-server-list/commit/a67e3ecb55273c4101b83be79294ad8ff3e44d44)
+
 ## 3.0.2
 * Revert .mjs output, output ES modules to .es.js again. (https://github.com/u-wave/react-server-list/commit/b9f5b4244e8f635ee143f452f965beddd5128742)
 * Update recompose to version 0.30.0 (https://github.com/u-wave/react-server-list/pull/31)
