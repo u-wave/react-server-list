@@ -36,7 +36,7 @@
     "isomorphic-fetch": "^2.2.1",
     "ms": "^2.1.1",
     "prop-types": "^15.6.2",
-    "react-markdown": "^3.6.0",
+    "react-markdown": "^4.0.0",
     "recompose": "^0.30.0",
     "strip-indent": "^2.0.0"
   },
