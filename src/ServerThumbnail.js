@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import compose from 'recompose/compose';
 import withState from 'recompose/withState';
 import withProps from 'recompose/withProps';
+import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import CardActions from '@material-ui/core/CardActions';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import { withStyles } from '@material-ui/core/styles';
@@ -35,6 +37,17 @@ const enhance = compose(
     header: {
       display: 'flex',
       justifyContent: 'space-between',
+    },
+    link: {
+      textDecoration: 'none',
+    },
+    nobodyPlaying: {
+      background: 'black',
+      color: 'white',
+      textDecoration: 'none',
+    },
+    actions: {
+      justifyContent: 'end',
     },
   }, { name: 'ServerThumbnail' }),
 );
@@ -85,9 +98,28 @@ const ServerThumbnail = ({
         </div>
       </CardContent>
 
-      <a href={server.url}>
-        <CurrentMedia media={media} />
-      </a>
+      {media ? (
+        <a href={server.url} className={classes.link}>
+          <CurrentMedia media={media} />
+        </a>
+      ) : (
+        <React.Fragment>
+          <a href={server.url} className={classes.link}>
+            <CardContent className={classes.nobodyPlaying}>
+              <Typography>Nobody is playing!</Typography>
+            </CardContent>
+          </a>
+          <CardActions className={classes.actions}>
+            <Button
+              variant="contained"
+              color="primary"
+              href={server.url}
+            >
+              Join
+            </Button>
+          </CardActions>
+        </React.Fragment>
+      )}
 
       {server.timeSincePing >= downTimeout && (
         <CardContent>
@@ -113,6 +145,9 @@ ServerThumbnail.propTypes = {
   classes: PropTypes.shape({
     root: PropTypes.string.isRequired,
     header: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    nobodyPlaying: PropTypes.string.isRequired,
+    actions: PropTypes.string.isRequired,
   }).isRequired,
   server: PropTypes.shape({
     name: PropTypes.string,
