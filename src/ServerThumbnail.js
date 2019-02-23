@@ -83,10 +83,10 @@ const ServerThumbnail = ({
       <CardContent>
         <div className={classes.header}>
           <div>
-            <Typography variant="headline">
+            <Typography variant="h5">
               {server.name}
             </Typography>
-            <Typography variant="body1">
+            <Typography variant="body2">
               {server.subtitle}
             </Typography>
           </div>
