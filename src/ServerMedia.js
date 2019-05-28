@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/styles';
 
-const enhance = withStyles({
+const useStyles = makeStyles({
   image: {
     width: '100%',
     paddingBottom: '75%',
@@ -30,36 +30,33 @@ const enhance = withStyles({
   },
 }, { name: 'CurrentMedia' });
 
-const CurrentMedia = ({
-  classes,
-  media,
-}) => (media ? (
-  <div>
-    <div
-      className={classes.image}
-      style={{ backgroundImage: `url(${JSON.stringify(media.thumbnail)})` }}
-    />
+function CurrentMedia({ media }) {
+  const classes = useStyles();
 
-    <div className={classes.nowPlaying}>
-      <p className={classes.title}>
-        {media.title}
-      </p>
-      <p className={classes.artist}>
-        {media.artist}
-      </p>
+  if (!media) {
+    return <span />;
+  }
+
+  return (
+    <div>
+      <div
+        className={classes.image}
+        style={{ backgroundImage: `url(${JSON.stringify(media.thumbnail)})` }}
+      />
+
+      <div className={classes.nowPlaying}>
+        <p className={classes.title}>
+          {media.title}
+        </p>
+        <p className={classes.artist}>
+          {media.artist}
+        </p>
+      </div>
     </div>
-  </div>
-) : (
-  <span />
-));
+  );
+}
 
 CurrentMedia.propTypes = {
-  classes: PropTypes.shape({
-    image: PropTypes.string.isRequired,
-    nowPlaying: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    artist: PropTypes.string.isRequired,
-  }).isRequired,
   media: PropTypes.shape({
     thumbnail: PropTypes.string,
     title: PropTypes.string,
@@ -67,4 +64,4 @@ CurrentMedia.propTypes = {
   }),
 };
 
-export default enhance(CurrentMedia);
+export default CurrentMedia;
