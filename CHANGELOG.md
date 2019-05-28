@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 4.0.0-alpha.1
+* Port to hooks. (https://github.com/u-wave/react-server-list/commit/2020d17bb7eceaac1b8dde078e47b5d827e1c7c5, https://github.com/u-wave/react-server-list/commit/f0b7cd9c5a6c13e4e9c25a9632830f97b77538c7)
+* Back to .es.js once again. (https://github.com/u-wave/react-server-list/commit/ed372a026c6283f0913b78697a60be220c25b90e)
+
 ## 4.0.0-alpha.0
 * Update @material-ui/core, @material-ui/icons to v4. (https://github.com/u-wave/react-server-list/commit/11c93cff78ceb29de2abf4811a731a312a0ee0ef)
 * Change to .mjs output. (https://github.com/u-wave/react-server-list/commit/b4d2e1d45ee1f82039b08c5be8e29a97f0c4623a)
