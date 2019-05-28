@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 4.0.0-alpha.0
+* Update @material-ui/core, @material-ui/icons to v4. (https://github.com/u-wave/react-server-list/commit/11c93cff78ceb29de2abf4811a731a312a0ee0ef)
+* Change to .mjs output. (https://github.com/u-wave/react-server-list/commit/b4d2e1d45ee1f82039b08c5be8e29a97f0c4623a)
+
 ## 3.0.4
 * Update react-markdown. (https://github.com/u-wave/react-server-list/pull/35)
 
