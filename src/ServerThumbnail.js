@@ -68,7 +68,7 @@ WarningText.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-const timedOutMessage = since => (
+const timedOutMessage = (since) => (
   ` This server may be down. It has not responded for ${since}.`
 );
 
@@ -111,7 +111,7 @@ function ServerThumbnail({ server, media }) {
             <CurrentMedia media={media} />
           </a>
         ) : (
-          <React.Fragment>
+          <>
             <a href={server.url} className={classes.link}>
               <CardContent className={classes.nobodyPlaying}>
                 <Typography>Nobody is playing!</Typography>
@@ -126,7 +126,7 @@ function ServerThumbnail({ server, media }) {
                 Join
               </Button>
             </CardActions>
-          </React.Fragment>
+          </>
         )}
 
         {server.timeSincePing >= downTimeout && (

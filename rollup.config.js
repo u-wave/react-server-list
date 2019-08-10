@@ -8,9 +8,9 @@ const external = Object.keys(pkg.dependencies)
 
 function isExternalModule(m) {
   if (m.startsWith('@')) {
-    return external.some(ex => ex === m.split('/').slice(0, 2).join('/'));
+    return external.some((ex) => ex === m.split('/').slice(0, 2).join('/'));
   }
-  return external.some(ex => ex === m.split('/')[0]);
+  return external.some((ex) => ex === m.split('/')[0]);
 }
 
 process.env.BABEL_ENV = 'rollup';

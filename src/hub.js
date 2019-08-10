@@ -7,8 +7,8 @@ const downTimeout = ms('10 minutes');
 
 export function loadServers(hubServer) {
   return fetch(hubServer)
-    .then(response => response.json())
-    .then(state => (
+    .then((response) => response.json())
+    .then((state) => (
       state.servers.sort((a, b) => {
         if (a.timeSincePing >= downTimeout) {
           return 1;

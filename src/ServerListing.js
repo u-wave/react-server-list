@@ -21,7 +21,7 @@ function ServerListing({ servers }) {
         <Typography>
           No servers are currently available.
         </Typography>
-      ) : servers.map(server => (
+      ) : servers.map((server) => (
         <ServerThumbnail
           key={server.url}
           server={server}
