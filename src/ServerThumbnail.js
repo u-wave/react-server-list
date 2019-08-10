@@ -46,7 +46,7 @@ const useStyles = makeStyles({
 function WarningIcon(props) {
   return (
     <MuiWarningIcon
-      {...props}
+      {...props} // eslint-disable-line react/jsx-props-no-spreading
       style={{
         height: 16,
         width: 16,

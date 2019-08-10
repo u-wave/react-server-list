@@ -22,12 +22,12 @@ function Container({ hub = 'https://announce.u-wave.net/' }) {
   const [servers, setServers] = useState(null);
 
   const handleUpdate = useCallback((update) => {
-    setServers((servers) => addServer(servers, update));
+    setServers((existingServers) => addServer(existingServers, update));
   }, []);
 
   useEffect(() => {
-    loadServers(hub).then((servers) => {
-      setServers(servers);
+    loadServers(hub).then((newServers) => {
+      setServers(newServers);
     });
 
     const events = announceEvents(hub, handleUpdate);
