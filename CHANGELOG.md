@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 4.0.0
+* Promote alpha to a full release.
+
 ## 4.0.0-alpha.1
 * Port to hooks. (https://github.com/u-wave/react-server-list/commit/2020d17bb7eceaac1b8dde078e47b5d827e1c7c5, https://github.com/u-wave/react-server-list/commit/f0b7cd9c5a6c13e4e9c25a9632830f97b77538c7)
 * Back to .es.js once again. (https://github.com/u-wave/react-server-list/commit/ed372a026c6283f0913b78697a60be220c25b90e)
