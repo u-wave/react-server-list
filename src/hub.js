@@ -1,6 +1,6 @@
 /* global EventSource */
 import 'event-source-polyfill';
-import fetch from 'isomorphic-fetch';
+import fetch from 'node-fetch';
 import ms from 'ms';
 
 const downTimeout = ms('10 minutes');
