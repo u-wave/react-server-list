@@ -1,3 +1,5 @@
+const pkg = require('./package.json');
+
 module.exports = (api) => {
   api.cache.never();
 
@@ -19,7 +21,9 @@ module.exports = (api) => {
     plugins: [
       '@babel/transform-react-constant-elements',
       '@babel/transform-react-inline-elements',
-      '@babel/transform-runtime',
+      ['@babel/transform-runtime', {
+        version: pkg.dependencies['@babel/runtime'],
+      }],
       ['transform-react-remove-prop-types', { mode: 'wrap' }],
     ],
   };
