@@ -22,6 +22,9 @@ import { Container as ServerList } from '@u-wave/react-server-list';
 
 ## Props
 
+| Name | Type | Default | Description |
+|-|-|-|-|
+| hub | string | `https://announce.u-wave.net` | URL of the announce server to use to discover üWave servers. |
 
 ## License
 
