@@ -34,5 +34,5 @@ import { Container as ServerList } from '@u-wave/react-server-list';
 [Usage]: #usage
 [Props]: #props
 [Demo]: https://hub.u-wave.net
-[Demo source code]: https://github.com/u-wave/hub/tree/master/client
+[Demo source code]: https://github.com/u-wave/hub/tree/default/client
 [MIT]: ./LICENSE
