@@ -32,7 +32,7 @@ function Container({ hub = 'https://announce.u-wave.net/' }) {
 
     const events = announceEvents(hub, handleUpdate);
     return () => events.remove();
-  }, [hub]);
+  }, [hub, handleUpdate]);
 
   return servers == null ? (
     <Loading message="Loading available servers..." />

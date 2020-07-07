@@ -80,10 +80,10 @@ function ServerThumbnail({ server, media }) {
     event.preventDefault();
     event.stopPropagation();
     setDescriptionOpen(true);
-  });
+  }, []);
   const onCloseDescription = useCallback(() => {
     setDescriptionOpen(false);
-  });
+  }, []);
 
   return (
     <div className={classes.root}>
