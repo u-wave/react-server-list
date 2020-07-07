@@ -1,4 +1,4 @@
-import babel from 'rollup-plugin-babel';
+import babel from '@rollup/plugin-babel';
 import nodeResolve from '@rollup/plugin-node-resolve';
 
 const pkg = require('./package.json');
@@ -29,7 +29,7 @@ export default {
   }],
   external: isExternalModule,
   plugins: [
-    babel({ runtimeHelpers: true }),
+    babel({ babelHelpers: 'runtime' }),
     nodeResolve(),
   ],
 };
