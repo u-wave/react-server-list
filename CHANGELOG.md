@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 * Use CSS instead of mui's styles mechanism.
+* Use material-ui 5.x alpha.
 
 ## 4.0.0
 * Promote alpha to a full release.
