@@ -6,12 +6,12 @@ import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import { makeStyles } from '@material-ui/styles';
 import DescriptionIcon from '@material-ui/icons/Menu';
 import MuiWarningIcon from '@material-ui/icons/Warning';
 import ms from 'ms';
 import DescriptionDialog from './DescriptionDialog';
 import CurrentMedia from './ServerMedia';
+import './ServerThumbnail.css';
 
 const {
   useCallback,
@@ -19,29 +19,6 @@ const {
 } = React;
 
 const downTimeout = ms('10 minutes');
-
-const useStyles = makeStyles({
-  root: {
-    width: 360,
-    margin: '0 20px 20px 20px',
-    position: 'relative',
-  },
-  header: {
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-  link: {
-    textDecoration: 'none',
-  },
-  nobodyPlaying: {
-    background: 'black',
-    color: 'white',
-    textDecoration: 'none',
-  },
-  actions: {
-    justifyContent: 'end',
-  },
-}, { name: 'ServerThumbnail' });
 
 function WarningIcon(props) {
   return (
@@ -73,8 +50,6 @@ const timedOutMessage = (since) => (
 );
 
 function ServerThumbnail({ server, media }) {
-  const classes = useStyles();
-
   const [isOpen, setDescriptionOpen] = useState(false);
   const onOpenDescription = useCallback((event) => {
     event.preventDefault();
@@ -86,10 +61,10 @@ function ServerThumbnail({ server, media }) {
   }, []);
 
   return (
-    <div className={classes.root}>
+    <div className="usl-ServerThumbnail">
       <Card>
         <CardContent>
-          <div className={classes.header}>
+          <div className="usl-ServerThumbnail-header">
             <div>
               <Typography variant="h5">
                 {server.name}
@@ -107,17 +82,17 @@ function ServerThumbnail({ server, media }) {
         </CardContent>
 
         {media ? (
-          <a href={server.url} className={classes.link}>
+          <a href={server.url} className="usl-ServerThumbnail-link">
             <CurrentMedia media={media} />
           </a>
         ) : (
           <>
-            <a href={server.url} className={classes.link}>
-              <CardContent className={classes.nobodyPlaying}>
+            <a href={server.url} className="usl-ServerThumbnail-link">
+              <CardContent className="usl-ServerThumbnail-nobodyPlaying">
                 <Typography>Nobody is playing!</Typography>
               </CardContent>
             </a>
-            <CardActions className={classes.actions}>
+            <CardActions className="usl-ServerThumbnail-actions">
               <Button
                 variant="contained"
                 color="primary"

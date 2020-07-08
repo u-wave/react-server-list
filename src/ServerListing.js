@@ -1,22 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/styles';
 import Typography from '@material-ui/core/Typography';
 import ServerThumbnail from './ServerThumbnail';
-
-const useStyles = makeStyles({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-  },
-}, { name: 'ServerListing' });
+import './ServerListing.css';
 
 function ServerListing({ servers }) {
-  const classes = useStyles();
-
   return (
-    <div className={classes.root}>
+    <div className="usl-ServerListing">
       {servers.length === 0 ? (
         <Typography>
           No servers are currently available.

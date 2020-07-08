@@ -1,5 +1,6 @@
 import babel from '@rollup/plugin-babel';
 import nodeResolve from '@rollup/plugin-node-resolve';
+import css from 'rollup-plugin-css-only';
 
 const pkg = require('./package.json');
 
@@ -31,5 +32,6 @@ export default {
   plugins: [
     babel({ babelHelpers: 'runtime' }),
     nodeResolve(),
+    css(),
   ],
 };

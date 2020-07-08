@@ -70,7 +70,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-test-renderer": "^16.13.1",
-    "rollup": "^2.20.0"
+    "rollup": "^2.20.0",
+    "rollup-plugin-css-only": "^2.1.0"
   },
   "greenkeeper": {
     "ignore": [

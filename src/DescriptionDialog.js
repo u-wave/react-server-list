@@ -8,26 +8,18 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogActions from '@material-ui/core/DialogActions';
 import withMobileDialog from '@material-ui/core/withMobileDialog';
-import { makeStyles } from '@material-ui/styles';
+import './DescriptionDialog.css';
 
 const Dialog = withMobileDialog()(MuiDialog);
 
-const useStyles = makeStyles({
-  markdown: {
-    color: 'rgba(255, 255, 255, 0.6)',
-  },
-}, { name: 'DescriptionDialog' });
-
 function DescriptionDialog({ server, isOpen, onCloseDescription }) {
-  const classes = useStyles();
-
   return (
-    <Dialog open={isOpen} onClose={onCloseDescription}>
+    <Dialog className="usl-DescriptionDialog" open={isOpen} onClose={onCloseDescription}>
       <DialogTitle>
         {server.name}
       </DialogTitle>
       <DialogContent>
-        <div className={classes.markdown}>
+        <div className="usl-DescriptionDialog-markdown">
           <Markdown source={stripIndent(server.description)} />
         </div>
       </DialogContent>
