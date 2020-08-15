@@ -43,12 +43,15 @@ function DescriptionDialog({ server, isOpen, onCloseDescription }) {
         </React.Suspense>
       </DialogContent>
       <DialogActions>
-        <Button onClick={onCloseDescription}>
+        <Button
+          color="inherit"
+          onClick={onCloseDescription}
+        >
           Close
         </Button>
         <Button
           color="primary"
-          variant="raised"
+          variant="contained"
           href={server.url}
         >
           Join

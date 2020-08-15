@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## Unreleased
+* Fix description dialog text colour.
+* Fix button colours in the header and the description dialog.
+
 ## 5.0.0-alpha.0
 * Use CSS instead of mui's styles mechanism.
 * Use material-ui 5.x alpha.
