@@ -11,7 +11,10 @@ import { useTheme } from '@material-ui/core/styles';
 import Loading from './Loading';
 import './DescriptionDialog.css';
 
-const Markdown = React.lazy(() => import('react-markdown'));
+const Markdown = React.lazy(() => (
+  import('@christianmurphy/react-remark')
+    .then(({ Remark }) => ({ default: Remark }))
+));
 
 const Dialog = withMobileDialog()(MuiDialog);
 
@@ -35,7 +38,7 @@ function DescriptionDialog({ server, isOpen, onCloseDescription }) {
       <DialogContent>
         <React.Suspense fallback={loading}>
           <div className="usl-DescriptionDialog-markdown" style={contentStyle}>
-            <Markdown source={stripIndent(server.description)} />
+            <Markdown>{stripIndent(server.description)}</Markdown>
           </div>
         </React.Suspense>
       </DialogContent>
