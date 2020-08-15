@@ -6,7 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 * Fix description dialog text colour.
-* Fix button colours in the header and the description dialog.
+* Fix button colours in the description dialog.
+* Use @christianmurphy/react-remark.
 
 ## 5.0.0-alpha.0
 * Use CSS instead of mui's styles mechanism.
