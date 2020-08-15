@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## Unreleased
 * Use CSS instead of mui's styles mechanism.
 * Use material-ui 5.x alpha.
+* Load react-markdown once a description dialog is first opened.
 
 ## 4.0.0
 * Promote alpha to a full release.

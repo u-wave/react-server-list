@@ -1,3 +1,11 @@
 .usl-DescriptionDialog-markdown {
   color: rgba(255, 255, 255, 0.6);
+  max-width: 100%;
+}
+
+.usl-DescriptionDialog-loading {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow-y: hidden;
 }

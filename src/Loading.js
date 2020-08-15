@@ -6,7 +6,7 @@ import './Loading.css';
 
 function Loading({ message }) {
   return (
-    <div className="Loading">
+    <div className="usl-Loading">
       <CircularProgress size={300} mode="indeterminate" />
       <Typography>
         {message}
