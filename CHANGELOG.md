@@ -5,6 +5,8 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
+
+## 5.0.0-alpha.1
 * Fix description dialog text colour.
 * Fix button colours in the description dialog.
 * Use @christianmurphy/react-remark.
