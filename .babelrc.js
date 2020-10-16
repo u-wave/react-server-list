@@ -16,11 +16,10 @@ module.exports = (api) => {
   return {
     presets: [
       ['@babel/env', envOptions],
-      '@babel/react',
+      ['@babel/react', { runtime: 'automatic' }],
     ],
     plugins: [
       '@babel/transform-react-constant-elements',
-      '@babel/transform-react-inline-elements',
       ['@babel/transform-runtime', {
         version: pkg.dependencies['@babel/runtime'],
       }],
