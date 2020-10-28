@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import stripIndent from 'strip-indent';
 import Button from '@material-ui/core/Button';
-import MuiDialog from '@material-ui/core/Dialog';
+import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogActions from '@material-ui/core/DialogActions';
-import withMobileDialog from '@material-ui/core/withMobileDialog';
 import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Loading from './Loading';
 import './DescriptionDialog.css';
 
@@ -16,10 +16,9 @@ const Markdown = React.lazy(() => (
     .then(({ Remark }) => ({ default: Remark }))
 ));
 
-const Dialog = withMobileDialog()(MuiDialog);
-
 function DescriptionDialog({ server, isOpen, onCloseDescription }) {
   const theme = useTheme();
+  const isFullScreen = useMediaQuery(theme.breakpoints.down('sm'));
   const contentStyle = {
     width: `${theme.breakpoints.values.sm}px`,
   };
@@ -31,7 +30,12 @@ function DescriptionDialog({ server, isOpen, onCloseDescription }) {
   );
 
   return (
-    <Dialog className="usl-DescriptionDialog" open={isOpen} onClose={onCloseDescription}>
+    <Dialog
+      className="usl-DescriptionDialog"
+      open={isOpen}
+      fullScreen={isFullScreen}
+      onClose={onCloseDescription}
+    >
       <DialogTitle>
         {server.name}
       </DialogTitle>
