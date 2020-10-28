@@ -6,6 +6,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## 5.0.0-alpha.2
+* Use new JSX transform.
+* Use new react-markdown.
+* Update for latest material-ui 5.x alpha.
+
 ## 5.0.0-alpha.1
 * Fix description dialog text colour.
 * Fix button colours in the description dialog.
