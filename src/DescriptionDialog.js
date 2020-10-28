@@ -11,10 +11,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Loading from './Loading';
 import './DescriptionDialog.css';
 
-const Markdown = React.lazy(() => (
-  import('@christianmurphy/react-remark')
-    .then(({ Remark }) => ({ default: Remark }))
-));
+const Markdown = React.lazy(() => import('react-markdown'));
 
 function DescriptionDialog({ server, isOpen, onCloseDescription }) {
   const theme = useTheme();
