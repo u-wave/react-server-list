@@ -30,7 +30,7 @@
   "homepage": "https://github.com/u-wave/react-server-list#readme",
   "dependencies": {
     "@babel/runtime": "^7.12.5",
-    "@material-ui/core": "5.0.0-alpha.19",
+    "@material-ui/core": "5.0.0-alpha.20",
     "@material-ui/icons": "5.0.0-alpha.19",
     "@material-ui/styles": "5.0.0-alpha.19",
     "event-source-polyfill": "^1.0.21",
