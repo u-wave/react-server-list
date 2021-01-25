@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## 5.0.0-alpha.3
+* Update for latest material-ui 5.x alpha.
+
 ## 5.0.0-alpha.2
 * Use new JSX transform.
 * Use new react-markdown.
