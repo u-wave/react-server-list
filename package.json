@@ -4,6 +4,7 @@
   "description": "Show a list of üWave servers.",
   "main": "dist/u-wave-react-server-list.js",
   "module": "dist/u-wave-react-server-list.es.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "prepare": "npm run build",
     "tsc": "tsc --build tsconfig.json",
