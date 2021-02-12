@@ -19,6 +19,8 @@ jobs:
         run: npm run test:lint
   test:
     name: Tests
+    # We don't have tests yet
+    skip: true
     strategy:
       matrix:
         node-version: [12.x, 14.x, 15.x]
