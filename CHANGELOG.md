@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## 5.0.0-alpha.4
+* Update for latest material-ui 5.x alpha.
+* Add typescript typings.
+
 ## 5.0.0-alpha.3
 * Update for latest material-ui 5.x alpha.
 
