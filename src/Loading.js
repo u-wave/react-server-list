@@ -4,10 +4,16 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Typography from '@material-ui/core/Typography';
 import './Loading.css';
 
+/**
+ * @typedef {object} LoadingProps
+ * @prop {string} message
+ *
+ * @param {LoadingProps} props
+ */
 function Loading({ message }) {
   return (
     <div className="usl-Loading">
-      <CircularProgress size={300} mode="indeterminate" />
+      <CircularProgress size={300} variant="indeterminate" />
       <Typography>
         {message}
       </Typography>

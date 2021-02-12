@@ -13,6 +13,14 @@ import './DescriptionDialog.css';
 
 const Markdown = React.lazy(() => import('react-markdown'));
 
+/**
+ * @typedef {object} DescriptionDialogProps
+ * @prop {import('./hub').Server & { description: string }} server
+ * @prop {boolean} isOpen
+ * @prop {() => void} onCloseDescription
+ *
+ * @param {DescriptionDialogProps} props
+ */
 function DescriptionDialog({ server, isOpen, onCloseDescription }) {
   const theme = useTheme();
   const isFullScreen = useMediaQuery(theme.breakpoints.down('sm'));

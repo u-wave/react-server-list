@@ -6,7 +6,8 @@
   "module": "dist/u-wave-react-server-list.es.js",
   "scripts": {
     "prepare": "npm run build",
-    "build": "rollup -c",
+    "tsc": "tsc --build tsconfig.json",
+    "build": "rollup -c && npm run tsc",
     "lint": "eslint --cache --fix .",
     "test": "npm run lint && cross-env NODE_ENV=test mocha",
     "example": "npm install && cd example && npm install"
@@ -33,6 +34,7 @@
     "@material-ui/core": "5.0.0-alpha.25",
     "@material-ui/icons": "5.0.0-alpha.24",
     "@material-ui/styles": "5.0.0-alpha.25",
+    "@types/react": "^17.0.1",
     "event-source-polyfill": "^1.0.21",
     "ms": "^2.1.2",
     "node-fetch": "^2.6.1",
@@ -73,7 +75,8 @@
     "react-dom": "^17.0.1",
     "react-test-renderer": "^17.0.1",
     "rollup": "^2.33.1",
-    "rollup-plugin-css-only": "^3.0.0"
+    "rollup-plugin-css-only": "^3.0.0",
+    "typescript": "^4.1.5"
   },
   "greenkeeper": {
     "ignore": [

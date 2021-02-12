@@ -4,6 +4,12 @@ import Loading from './Loading';
 import ServerListing from './ServerListing';
 import useServers from './useServers';
 
+/**
+ * @typedef {object} ContainerProps
+ * @prop {string} [hub]
+ *
+ * @param {ContainerProps} props
+ */
 function Container({ hub = 'https://announce.u-wave.net/' }) {
   const servers = useServers(hub);
 

@@ -4,7 +4,13 @@ import Typography from '@material-ui/core/Typography';
 import ServerThumbnail from './ServerThumbnail';
 import './ServerListing.css';
 
-function ServerListing({ servers }) {
+/**
+ * @typedef {object} ServerListProps
+ * @prop {import('./hub').Server[]} servers
+ *
+ * @param {ServerListProps} props
+ */
+function ServerList({ servers }) {
   return (
     <div className="usl-ServerListing">
       {servers.length === 0 ? (
@@ -22,8 +28,8 @@ function ServerListing({ servers }) {
   );
 }
 
-ServerListing.propTypes = {
+ServerList.propTypes = {
   servers: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
-export default ServerListing;
+export default ServerList;

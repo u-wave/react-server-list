@@ -15,6 +15,10 @@ function addServer(list, update) {
   return servers;
 }
 
+/**
+ * @param {string} hub
+ * @return {import('./hub').Server[]}
+ */
 export default function useServers(hub) {
   const [servers, setServers] = useState(null);
 

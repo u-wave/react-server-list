@@ -20,6 +20,9 @@ const {
 
 const downTimeout = ms('10 minutes');
 
+/**
+ * @param {import('@material-ui/core/SvgIcon').SvgIconProps} props
+ */
 function WarningIcon(props) {
   return (
     <MuiWarningIcon
@@ -33,9 +36,15 @@ function WarningIcon(props) {
   );
 }
 
+/**
+ * @typedef {object} WarningTextProps
+ * @prop {import('react').ReactNode} children
+ *
+ * @param {WarningTextProps} props
+ */
 function WarningText({ children }) {
   return (
-    <Typography type="body1" style={{ color: '#ed404f' }}>
+    <Typography variant="body1" style={{ color: '#ed404f' }}>
       {children}
     </Typography>
   );
@@ -49,6 +58,21 @@ const timedOutMessage = (since) => (
   ` This server may be down. It has not responded for ${since}.`
 );
 
+/**
+ * @param {import('./hub').Server} server
+ * @return {server is { description: string }}
+ */
+function hasDescription(server) {
+  return typeof server.description === 'string';
+}
+
+/**
+ * @typedef {object} ServerThumbnailProps
+ * @prop {import('./hub').Server} server
+ * @prop {import('./hub').Media} [media]
+ *
+ * @param {ServerThumbnailProps} props
+ */
 function ServerThumbnail({ server, media }) {
   const [isOpen, setDescriptionOpen] = useState(false);
   const onOpenDescription = useCallback((event) => {
@@ -104,22 +128,22 @@ function ServerThumbnail({ server, media }) {
           </>
         )}
 
-        {server.timeSincePing >= downTimeout && (
+        {server.timeSincePing >= downTimeout ? (
           <CardContent>
             <WarningText>
               <WarningIcon />
               {timedOutMessage(ms(server.timeSincePing, { long: true }))}
             </WarningText>
           </CardContent>
-        )}
+        ) : null}
 
-        {server.description && (
+        {hasDescription(server) ? (
           <DescriptionDialog
             server={server}
             isOpen={isOpen}
             onCloseDescription={onCloseDescription}
           />
-        )}
+        ) : null}
       </Card>
     </div>
   );
