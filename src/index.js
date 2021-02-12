@@ -1,5 +1,5 @@
 import Container from './Container';
-import ServerList from './ServerListing';
+import ServerList from './ServerList';
 import { loadServers, announceEvents } from './hub';
 import useServers from './useServers';
 
@@ -8,7 +8,7 @@ import useServers from './useServers';
 /** @typedef {import('./hub').Booth} Booth */
 /** @typedef {import('./hub').Media} Media */
 /** @typedef {import('./Container').ContainerProps} ContainerProps */
-/** @typedef {import('./ServerListing').ServerListProps} ServerListProps */
+/** @typedef {import('./ServerList').ServerListProps} ServerListProps */
 
 export {
   Container,

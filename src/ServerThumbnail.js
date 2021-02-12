@@ -10,7 +10,7 @@ import DescriptionIcon from '@material-ui/icons/Menu';
 import MuiWarningIcon from '@material-ui/icons/Warning';
 import ms from 'ms';
 import DescriptionDialog from './DescriptionDialog';
-import CurrentMedia from './ServerMedia';
+import CurrentMedia from './CurrentMedia';
 import './ServerThumbnail.css';
 
 const {

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import ServerThumbnail from './ServerThumbnail';
-import './ServerListing.css';
+import './ServerList.css';
 
 /**
  * @typedef {object} ServerListProps
@@ -12,7 +12,7 @@ import './ServerListing.css';
  */
 function ServerList({ servers }) {
   return (
-    <div className="usl-ServerListing">
+    <div className="usl-ServerList">
       {servers.length === 0 ? (
         <Typography>
           No servers are currently available.

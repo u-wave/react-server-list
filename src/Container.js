@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Loading from './Loading';
-import ServerListing from './ServerListing';
+import ServerList from './ServerList';
 import useServers from './useServers';
 
 /**
@@ -16,7 +16,7 @@ function Container({ hub = 'https://announce.u-wave.net/' }) {
   return servers == null ? (
     <Loading message="Loading available servers..." />
   ) : (
-    <ServerListing servers={servers} />
+    <ServerList servers={servers} />
   );
 }
 
