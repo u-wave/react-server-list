@@ -57,7 +57,6 @@
     "@emotion/styled": "^11.0.0",
     "@rollup/plugin-babel": "^5.2.1",
     "@rollup/plugin-node-resolve": "^11.0.0",
-    "babel-eslint": "^10.1.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "cross-env": "^7.0.2",
     "doctrine": "^3.0.0",
