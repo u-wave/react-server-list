@@ -2,6 +2,12 @@
   max-width: 100%;
 }
 
+.usl-DescriptionDialog-markdown a:any-link {
+  color: #c72e6c;
+  /* link color may be set by outer app (eg the üWave web client) */
+  color: var(--link-color);
+}
+
 .usl-DescriptionDialog-loading {
   max-width: 100%;
   display: flex;
