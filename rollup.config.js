@@ -14,8 +14,6 @@ function isExternalModule(m) {
   return external.some((ex) => ex === m.split('/')[0]);
 }
 
-process.env.BABEL_ENV = 'rollup';
-
 export default {
   input: 'src/index.js',
   output: [{
@@ -32,6 +30,6 @@ export default {
   plugins: [
     babel({ babelHelpers: 'runtime' }),
     nodeResolve(),
-    css(),
+    css({ output: 'u-wave-react-server-list.css' }),
   ],
 };
