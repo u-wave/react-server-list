@@ -6,6 +6,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## 5.0.0-alpha.6
+* Update for latest material-ui 5.x alpha.
+* Remove event sourcing polyfill. Users should bring their own.
+* Fix markdown link colour in server descriptions, but better.
+
 ## 5.0.0-alpha.5
 * Update for latest material-ui 5.x alpha.
 * Fix markdown link colour in server descriptions.
