@@ -1,4 +1,3 @@
-import 'event-source-polyfill';
 import fetch from 'node-fetch';
 import ms from 'ms';
 

@@ -36,7 +36,6 @@
     "@material-ui/icons": "5.0.0-alpha.27",
     "@material-ui/styles": "5.0.0-alpha.27",
     "@types/react": "^17.0.1",
-    "event-source-polyfill": "^1.0.21",
     "ms": "^2.1.2",
     "node-fetch": "^2.6.1",
     "prop-types": "^15.7.2",
