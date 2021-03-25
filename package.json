@@ -34,7 +34,7 @@
     "@babel/runtime": "^7.12.5",
     "@material-ui/core": "5.0.0-alpha.27",
     "@material-ui/icons": "5.0.0-alpha.27",
-    "@material-ui/styles": "5.0.0-alpha.27",
+    "@material-ui/styles": "5.0.0-alpha.28",
     "@types/react": "^17.0.1",
     "ms": "^2.1.2",
     "node-fetch": "^2.6.1",
