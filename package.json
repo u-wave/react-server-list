@@ -39,7 +39,7 @@
     "ms": "^2.1.2",
     "node-fetch": "^2.6.1",
     "prop-types": "^15.7.2",
-    "react-markdown": "^5.0.2",
+    "react-markdown": "^6.0.0",
     "strip-indent": "^3.0.0"
   },
   "peerDependencies": {
