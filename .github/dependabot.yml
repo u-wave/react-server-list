@@ -1,0 +1,35 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: expect
+    versions:
+    - "> 1.20.2"
+  - dependency-name: "@material-ui/styles"
+    versions:
+    - 5.0.0-alpha.24
+    - 5.0.0-alpha.26
+    - 5.0.0-alpha.28
+    - 5.0.0-alpha.29
+    - 5.0.0-alpha.30
+    - 5.0.0-alpha.31
+  - dependency-name: "@material-ui/core"
+    versions:
+    - 5.0.0-alpha.24
+    - 5.0.0-alpha.26
+    - 5.0.0-alpha.28
+    - 5.0.0-alpha.29
+    - 5.0.0-alpha.30
+    - 5.0.0-alpha.31
+  - dependency-name: react-markdown
+    versions:
+    - 6.0.0
+  - dependency-name: "@material-ui/icons"
+    versions:
+    - 5.0.0-alpha.24
+    - 5.0.0-alpha.26
+    - 5.0.0-alpha.28
